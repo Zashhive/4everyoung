@@ -1,0 +1,606 @@
+/**
+ * 4Everyoung Skincare Website
+ * Services Pages Stylesheet
+ */
+
+/* Service Hero Section */
+.service-hero {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.before-after-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.before-image, 
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.before-image img, 
+.after-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-image {
+    z-index: 1;
+    width: 50%; /* Initial state shows half of each image */
+}
+
+.after-image {
+    z-index: 0;
+}
+
+.slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 3;
+}
+
+.slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Initial position matches the before-image width */
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Initial position matches the before-image width */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider-handle::before,
+.slider-handle::after {
+    content: '';
+    position: absolute;
+    background-color: var(--deep-charcoal);
+    width: 10px;
+    height: 2px;
+}
+
+.slider-handle::before {
+    transform: rotate(45deg);
+}
+
+.slider-handle::after {
+    transform: rotate(-45deg);
+}
+
+.before-label, 
+.after-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.before-label {
+    left: 20px;
+}
+
+.after-label {
+    right: 20px;
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 4;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(5px);
+}
+
+.service-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Treatment Details Section */
+.treatment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: var(--space-xl);
+}
+
+.treatment-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.treatment-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.treatment-content h2 {
+    margin-bottom: var(--space-md);
+}
+
+.treatment-content p {
+    margin-bottom: var(--space-md);
+}
+
+.treatment-benefits {
+    margin: var(--space-lg) 0;
+}
+
+.treatment-benefits h3 {
+    margin-bottom: var(--space-md);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--champagne-beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-md);
+    color: var(--emerald-green);
+    font-size: 18px;
+}
+
+.benefit-text h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.benefit-text p {
+    font-size: 14px;
+    color: var(--warm-gray);
+    margin-bottom: 0;
+}
+
+.cta-box {
+    background-color: var(--champagne-beige);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+    text-align: center;
+    border-top: 3px solid var(--soft-gold);
+}
+
+.cta-box h4 {
+    margin-bottom: var(--space-sm);
+}
+
+.cta-box p {
+    margin-bottom: var(--space-md);
+}
+
+.treatment-process {
+    margin-bottom: var(--space-xl);
+}
+
+.treatment-process h3 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-md);
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--warm-gray);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--soft-gold);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+.process-step h5 {
+    font-size: 16px;
+    margin-bottom: var(--space-sm);
+}
+
+.process-step p {
+    font-size: 14px;
+    color: var(--warm-gray);
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: var(--champagne-beige);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.pricing-table {
+    max-width: 900px;
+    margin: 0 auto var(--space-xl);
+    background-color: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+}
+
+.pricing-row.header {
+    background-color: var(--deep-charcoal);
+    color: white;
+}
+
+.pricing-cell {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-row.header .pricing-cell {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-option {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pricing-description {
+    font-size: 14px;
+    color: var(--warm-gray);
+}
+
+.pricing-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--deep-charcoal);
+    margin-bottom: 5px;
+}
+
+.pricing-save {
+    font-size: 14px;
+    color: var(--emerald-green);
+    font-weight: 600;
+}
+
+.pricing-row.featured {
+    background-color: rgba(212, 175, 55, 0.1);
+    position: relative;
+}
+
+.pricing-row.featured::before {
+    content: 'BEST VALUE';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--soft-gold);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.pricing-cta {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.payment-option {
+    text-align: center;
+}
+
+.payment-option img {
+    height: 30px;
+    margin-bottom: var(--space-sm);
+}
+
+.payment-option p {
+    font-size: 12px;
+    color: var(--warm-gray);
+    margin-bottom: 0;
+}
+
+/* Client Results Section */
+.results-section {
+    background-color: white;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.case-studies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: var(--space-xl);
+}
+
+.case-study {
+    background-color: var(--soft-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.case-study:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-study-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.case-study-image .before-image,
+.case-study-image .after-image {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.case-study-image .before-image {
+    left: 0;
+}
+
+.case-study-image .after-image {
+    right: 0;
+}
+
+.case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-study-image .before-label,
+.case-study-image .after-label {
+    bottom: 10px;
+    z-index: 1;
+}
+
+.case-study-image .divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.case-study-content {
+    padding: var(--space-lg);
+}
+
+.case-study-content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.case-study-content .stars {
+    color: var(--soft-gold);
+    font-size: 14px;
+    margin-bottom: var(--space-md);
+}
+
+.case-study-content p {
+    font-size: 14px;
+    margin-bottom: var(--space-md);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+}
+
+.client-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: var(--space-md);
+}
+
+.client-details h5 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.client-details p {
+    font-size: 14px;
+    color: var(--warm-gray);
+    margin-bottom: 0;
+}
+
+.video-testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: var(--emerald-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+}
+
+.play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid white;
+    margin-left: 5px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--soft-white);
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.faq-item {
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.faq-question {
