@@ -3,12 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>4Everyoung Skincare | Luxury Anti-Aging Treatments</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience transformative luxury skincare treatments at 4Everyoung. Award-winning anti-aging facials, advanced technology, and personalized approach.">
+    <meta name="keywords" content="luxury skincare, anti-aging treatments, Los Angeles skincare, facial treatments, skin rejuvenation">
+    
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="4Everyoung Skincare | Luxury Anti-Aging Treatments">
+    <meta property="og:description" content="Experience visible results with our award-winning luxury skincare treatments. Book your free consultation today!">
+    <meta property="og:image" content="https://www.4everyoungskincare.com/images/social-share.jpg">
+    <meta property="og:url" content="https://www.4everyoungskincare.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "4Everyoung Skincare",
+        "image": "https://www.4everyoungskincare.com/images/logo.png",
+        "url": "https://www.4everyoungskincare.com",
+        "telephone": "(800) 555-1234",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Beauty Blvd, Suite 200",
+            "addressLocality": "Los Angeles",
+            "addressRegion": "CA",
+            "postalCode": "90001",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.052235,
+            "longitude": -118.243683
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "$$-$$$"
+    }
+    </script>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page!</h1>
-    <p>This is a test to make sure my site is displaying correctly.</p>
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <h2>4<span>Everyoung</span></h2>
+                </div>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="booking" class="btn btn-primary">Book Now</a>
+                
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation (Hidden by Default) -->
+    <div class="mobile-nav">
+        <div class="container">
+            <div class="mobile-nav-header">
+                <h2>4<span>Everyoung</span></h2>
+                <button class="mobile-nav-close"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <ul class="mobile-nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-cta">
+                <a href="booking" class="btn btn-primary btn-block">Book Appointment</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="assets/images/hero-video.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img src="assets/images/hero-fallback.jpg" alt="Luxury skincare treatment">
+        </video>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>REVEAL YOUR AGELESS BEAUTY</h1>
+            <p>Luxury Anti-Aging Treatments Backed by Science</p>
+            <div class="hero-buttons">
+                <a href="booking" class="btn btn-primary btn-lg">📅 BOOK YOUR FREE CONSULTATION</a>
+                <a href="#services" class="btn btn-secondary btn-lg">💎 EXPLORE OUR TREATMENTS</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trust Building Section -->
+    <section class="trust-section section" id="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>Real Results, Real Clients</h2>
+                <p>See the transformations our clients have experienced with our luxury skincare treatments.</p>
+            </div>
+            
+            <div class="transformation-slider">
+                <div class="before-after-slider">
+                    <div class="before-image">
+                        <img src="assets/images/before-after/before-1.jpg" alt="Before treatment">
+                        <span class="before-label">Before</span>
+                    </div>
+                    <div class="after-image">
+                        <img src="assets/images/before-after/after-1.jpg" alt="After treatment">
+                        <span class="after-label">After</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="slider-input">
+                    <div class="slider-line"></div>
+                    <div class="slider-handle"></div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/testimonials/client-1.jpg" alt="Sarah Johnson" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"I've tried countless products and treatments, but nothing compares to 4Everyoung. My skin looks 10 years younger after just 3 treatments!"</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/testimonials/client-2.jpg" alt="Rebecca Williams" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Rebecca Williams</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The staff is so knowledgeable and the treatments are truly luxurious. I always leave feeling pampered and my skin glowing."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/images/testimonials/client-3.jpg" alt="Michael Thompson" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Michael Thompson</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"As a man in my 50s, I was hesitant at first. Now I'm a regular! My colleagues keep asking what my secret is."</p>
+                </div>
+            </div>
+            
+            <div class="featured-in">
+                <h3>As Featured In</h3>
+                <div class="featured-logos">
+                    <img src="assets/images/featured/vogue.png" alt="Vogue logo">
+                    <img src="assets/images/featured/elle.png" alt="Elle logo">
+                    <img src="assets/images/featured/cosmopolitan.png" alt="Cosmopolitan logo">
+                    <img src="assets/images/featured/harpers-bazaar.png" alt="Harper's Bazaar logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services-section section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Luxury Treatments</h2>
+                <p>Discover our range of exclusive anti-aging and skincare services.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <div class="service-content">
+                        <h3>Anti-Aging Facial</h3>
+                        <p>Award-winning face lifting treatments customized for your skin needs.</p>
+                        <a href="services/anti-aging-facial.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💆‍♀️</div>
+                    <div class="service-content">
+                        <h3>Luxury Facials</h3>
+                        <p>Premium facial treatments using exclusive product formulations.</p>
+                        <a href="services/luxury-facials.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <div class="service-content">
+                        <h3>Holistic Treatments</h3>
+                        <p>Balance mind and body with our holistic approach to skincare.</p>
+                        <a href="services/holistic-treatments.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💉</div>
+                    <div class="service-content">
+                        <h3>Advanced Injectables</h3>
+                        <p>Precision treatments to smooth lines and restore volume.</p>
+                        <a href="services/advanced-injectables.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <div class="service-content">
+                        <h3>Skin Technology</h3>
+                        <p>Cutting-edge devices and methods for optimal results.</p>
+                        <a href="services/skin-technology.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <div class="service-content">
+                        <h3>Quick Refresh</h3>
+                        <p>Effective solutions when you're short on time but need results.</p>
+                        <a href="services/quick-refresh.html" class="service-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Limited-Time Offer Section -->
+    <section class="offer-section section">
+        <div class="container">
+            <div class="offer-container">
+                <h2>10% OFF YOUR FIRST TREATMENT</h2>
+                <p>Limited time offer for new clients. Book your consultation today!</p>
+                
+                <div class="countdown" data-end-date="2025-04-30T23:59:59">
+                    <!-- Countdown content will be generated by JavaScript -->
+                </div>
+                
+                <a href="booking" class="btn btn-primary btn-lg">CLAIM OFFER NOW</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section section" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="assets/images/founder.jpg" alt="Founder of 4Everyoung Skincare">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Our Journey to Perfect Skin</h2>
+                    <p>Founded in 2010 by renowned dermatologist Dr. Elizabeth Chen, 4Everyoung Skincare was born from a passion for delivering exceptional results through science-backed treatments.</p>
+                    <p>With over 15 years of experience in aesthetic medicine, our team combines cutting-edge technology with luxurious experiences to deliver transformative results.</p>
+                    
+                    <div class="philosophy-box">
+                        <h4>Our Philosophy</h4>
+                        <p>We believe that beautiful skin is healthy skin. Every treatment we offer is designed not just to address surface concerns, but to improve the fundamental health and function of your skin for long-lasting results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instagram Feed Section -->
+    <section class="instagram-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Follow Our Journey</h2>
+                <p>Stay connected and see our latest treatments, behind-the-scenes moments, and client transformations.</p>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-1.jpg" alt="Instagram post 1">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-2.jpg" alt="Instagram post 2">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-3.jpg" alt="Instagram post 3">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-4.jpg" alt="Instagram post 4">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-5.jpg" alt="Instagram post 5">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="assets/images/instagram/post-6.jpg" alt="Instagram post 6">
+                    <div class="instagram-overlay">
+                        <div class="instagram-icon"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="follow-instagram">
+                <a href="https://www.instagram.com/4everyo
